@@ -19,7 +19,7 @@ namespace NUnit_Flipkart_CS.Testcase
         public void Test1()
         {
            
-            ExcelDataProvider.PopulateInCollection(@"D:\Pavani_WorkSpace\NUnit_Flipkart_CS\NUnit_Flipkart_CS\TestData\FlipkartTestData.xlsx");
+            ExcelDataProvider.PopulateInCollection(@"D:\Selenium_C#_PJT\NUnit_Flipkart_CS\NUnit_Flipkart_CS\TestData\FlipkartTestData.xlsx");
             //Login to Filpkart
             test.Log(Status.Info, "Login to Filpkart");
             HomePage homePage = new HomePage(driver);

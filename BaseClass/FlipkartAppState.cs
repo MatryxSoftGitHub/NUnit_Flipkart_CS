@@ -54,16 +54,16 @@ namespace NUnit_Flipkart_CS.BaseClass
             mail.Subject = sSubject;
             mail.Body = sContentBody;
             mail.IsBodyHtml = true;
-            //To obtain the current solution path/project path
+            ///To obtain the current solution path/project path
 
-            string pth = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
-            string actualPath = pth.Substring(0, pth.LastIndexOf("bin"));
-            string projectPath = new Uri(actualPath).LocalPath;
+            //string pth = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
+            //string actualPath = pth.Substring(0, pth.LastIndexOf("bin"));
+            //string projectPath = new Uri(actualPath).LocalPath;
 
             //Append the html report file to current project path
-            string reportPath = projectPath + "Reports\\FlipkartWebsiteReport.html";
-            mail.Attachments.Add(new Attachment(reportPath));
-            //mail.Attachments.Add(new Attachment(@"D:\Pavani_WorkSpace\NUnit_Flipkart_CS\NUnit_Flipkart_CS\Reports\FlipkartWebsiteReport.html"));
+            //string reportPath = projectPath + "Reports\\FlipkartWebsiteReport.html";
+            //mail.Attachments.Add(new Attachment(reportPath));
+            mail.Attachments.Add(new Attachment(@"D:\Selenium_C#_PJT\NUnit_Flipkart_CS\NUnit_Flipkart_CS\Reports\FlipkartWebsiteReport.html"));
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             //SmtpClient smtp = new SmtpClient("sg2plcpnl0104.prod.sin2.secureserver.net", 465);
             smtp.Credentials = new NetworkCredential(sFromMail, sPassword);
@@ -89,15 +89,15 @@ namespace NUnit_Flipkart_CS.BaseClass
 
                     //To obtain the current solution path/project path
 
-                    string pth = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
-                    string actualPath = pth.Substring(0, pth.LastIndexOf("bin"));
-                    string projectPath = new Uri(actualPath).LocalPath;
+                    //string pth = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
+                    //string actualPath = pth.Substring(0, pth.LastIndexOf("bin"));
+                    //string projectPath = new Uri(actualPath).LocalPath;
 
                     //Append the html report file to current project path
-                    string reportPath = projectPath + "Reports\\FlipkartWebsiteReport.html";
+                    //string reportPath = projectPath + "Reports\\FlipkartWebsiteReport.html";
 
-                    var htmlReporter = new ExtentHtmlReporter(reportPath);
-                    //var htmlReporter = new ExtentHtmlReporter(@"D:\Pavani_WorkSpace\NUnit_Flipkart_CS\NUnit_Flipkart_CS\Reports\FlipkartWebsiteReport.html");
+                    //var htmlReporter = new ExtentHtmlReporter(reportPath);
+                    var htmlReporter = new ExtentHtmlReporter(@"D:\Selenium_C#_PJT\NUnit_Flipkart_CS\NUnit_Flipkart_CS\Reports\FlipkartWebsiteReport.html");
                     extent.AttachReporter(htmlReporter);
                     extent.AddSystemInfo("Operating System", "Windows 10");
                     extent.AddSystemInfo("HostName", "Pavani G K");
