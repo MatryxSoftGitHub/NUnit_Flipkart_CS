@@ -28,7 +28,7 @@ namespace NUnit_Flipkart_CS.BaseClass
 
             test.Log(Status.Info, "Browser is launched");
 
-            ////Navigate to naukri website
+            //Navigate to naukri website
 
             driver = BrowserFactory.OnStart(driver, "Chrome", "https://www.flipkart.com/");
 
